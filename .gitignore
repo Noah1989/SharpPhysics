@@ -1,0 +1,5 @@
+bin/
+*.feature.cs
+Specifications.features
+TestResult.*
+feature-cs-files
