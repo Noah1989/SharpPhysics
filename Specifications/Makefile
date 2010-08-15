@@ -3,11 +3,13 @@ REFS = ../Libraries/NUnit-2.5.5.10112/bin/net-2.0/framework/nunit.framework.dll 
        ../Libraries/TechTalk/SpecFlow/TechTalk.SpecFlow.dll \
        ../Core/UnitsOfMeasurement/bin/SharpPhysics.Core.UnitsOfMeasurement.dll
 
-all: html-report
+all: run-tests
 
 compile: bin/SharpPhysics.Specifications.dll
 run-tests: TestResult.xml
-html-report: TestResult.html
+html-report: 
+	-$(MAKE) TestResult.xml
+	$(MAKE) TestResult.html
 
 Specifications.features: *.feature
 	( \
@@ -43,7 +45,7 @@ bin/SharpPhysics.Specifications.dll: feature-cs-files *.cs $(REFS)
 	-cp $(patsubst %,%.mdb,$(REFS)) bin/
 
 TestResult.xml: bin/SharpPhysics.Specifications.dll
-	-mono --debug \
+	mono --debug \
 	../Libraries/NUnit-2.5.5.10112/bin/net-2.0/nunit-console.exe \
 	bin/SharpPhysics.Specifications.dll -labels
 
