@@ -11,6 +11,9 @@ specs: core
 test: specs
 	$(MAKE) -C Specifications
 
+report: specs
+	$(MAKE) html-report -C Specifications
+
 clean:
 	$(MAKE) clean -C Core
 	$(MAKE) clean -C Specifications
