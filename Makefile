@@ -1,4 +1,6 @@
-all: specs
+all: compile
+
+compile: core specs
 
 core:
 	$(MAKE) -C Core
