@@ -13,6 +13,7 @@ Scenario: Divide two values
     And a value of 20 milliamperes
     When I divide the two values
     Then the result should be 450 ohms
+    
 Scenario: Add two values
     Given a value of 5 metres
     And a value of 3 metres

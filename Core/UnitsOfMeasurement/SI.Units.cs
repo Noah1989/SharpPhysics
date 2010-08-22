@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace SharpPhysics.Core.UnitsOfMeasurement
 {
@@ -113,5 +114,10 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
                                                             Henry,
                                                             Katal
                                                         };
+                                                        
+        private static readonly Unit[] __allUnits = __baseUnits
+                                                      .Cast<Unit>()
+                                                      .Concat(__derivedUnits)
+                                                      .ToArray();
     }
 }

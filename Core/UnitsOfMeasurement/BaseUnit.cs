@@ -35,11 +35,12 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
             __definedUnits.Add(newUnit);
             return newUnit;
         }
-        
+                
         private BaseUnit(string name, string symbol, string quantityName)
         {
+           this[this] = 1;
            Unit.AddName(this, name, symbol, quantityName);
-        }       
+        }
       
     }
 }
