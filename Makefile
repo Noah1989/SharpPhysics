@@ -1,11 +1,14 @@
 all: compile
 
-compile: core specs
+compile: core physical-entities specs
 
 core:
 	$(MAKE) -C Core
+	
+physical-entities: core
+	$(MAKE) -C PhysicalEntities
 
-specs: core
+specs: core physical-entities
 	$(MAKE) compile -C Specifications 
 
 test: specs
@@ -16,4 +19,5 @@ report: specs
 
 clean:
 	$(MAKE) clean -C Core
+	$(MAKE) clean -C PhysicalEntities
 	$(MAKE) clean -C Specifications

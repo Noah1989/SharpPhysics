@@ -1,4 +1,5 @@
 ﻿using System;
+using SharpPhysics.PhysicalEntities.Mechanics;
 using SharpPhysics.Core.UnitsOfMeasurement;
 using TechTalk.SpecFlow;
 
@@ -7,16 +8,24 @@ namespace SharpPhysics.Specifications
     [Binding]
     public class SimplePhysicsSteps
     {
+        private PointMass _pointMass;
+        //private GravityField _gravityField;
+    
         [Given(@"a point mass")]
         public void GivenAPointMass()
         {
-            ScenarioContext.Current.Pending();
+            _pointMass = new PointMass(1 .SI().Kilogram);
         }
 
         [Given(@"earth's gravity field")]
         public void GivenEarthsGravityField()
         {
-            ScenarioContext.Current.Pending();
+            /*_gravityField = new GravityField 
+                                {
+                                    Acceleration = 
+                                        new Vector3(0, 0, -9.81)
+                                            .SI().Metre / SI.Second.Squared
+                                };*/
         }
 
         [When(@"I simulate ten seconds of time")]

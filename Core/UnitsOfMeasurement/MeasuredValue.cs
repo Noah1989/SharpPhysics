@@ -63,6 +63,12 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
             if(unitA != unitB)
                 throw new UnitsOfMeasurementMismatchException(unitA, unitB);
         }
+        
+        public MeasuredValue In(Unit unit)
+        {
+            CheckUnitsMatch(_unit, unit);
+            return this;
+        }
                
         public int CompareTo(MeasuredValue other)
         {
