@@ -1,7 +1,8 @@
 REFS = ../Libraries/NUnit-2.5.5.10112/bin/net-2.0/framework/nunit.framework.dll \
        ../Libraries/SharpTestsEx1.0.0RTM/SharpTestsEx.NUnit.dll \
        ../Libraries/TechTalk/SpecFlow/TechTalk.SpecFlow.dll \
-       ../Core/UnitsOfMeasurement/bin/SharpPhysics.Core.UnitsOfMeasurement.dll
+       ../Core/bin/SharpPhysics.Core.dll \
+       ../PhysicalEntities/Mechanics/bin/SharpPhysics.PhysicalEntities.Mechanics.dll
 
 all: run-tests
 

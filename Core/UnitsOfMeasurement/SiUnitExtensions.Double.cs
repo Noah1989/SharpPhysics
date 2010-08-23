@@ -4,16 +4,16 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
 {
     public static class SiUnitExtensions
     {
-        public static SiUnitExpression SI(this double value)
+        public static SiUnitDoubleExpression SI(this double value)
         {
-            return new SiUnitExpression(value);
+            return new SiUnitDoubleExpression(value);
         }
         
-        public sealed class SiUnitExpression
+        public sealed class SiUnitDoubleExpression
         {
             private readonly double _value;
         
-            internal SiUnitExpression(double value)
+            internal SiUnitDoubleExpression(double value)
             {
                 _value = value;
             }            
