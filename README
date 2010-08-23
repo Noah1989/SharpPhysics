@@ -1,1 +1,8 @@
-(nothing to be read here yet)
+SharpPhysics - a physics simulation framework written in C#
+
+This project has a BuildBot running at http://noah-vserver.net:8000
+
+Currently supported features:
+
+  - units of measurement
+
