@@ -4,143 +4,143 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
 {
     public static partial class SiUnitExtensions
     {
-        public static SiUnitDoubleExpression SI(this double value)
+        public static SiUnitVector3Expression SI(this Vector3 value)
         {
-            return new SiUnitDoubleExpression(value);
+            return new SiUnitVector3Expression(value);
         }
         
-        public sealed class SiUnitDoubleExpression
+        public sealed class SiUnitVector3Expression
         {
-            private readonly double _value;
+            private readonly Vector3 _value;
         
-            internal SiUnitDoubleExpression(double value)
+            internal SiUnitVector3Expression(Vector3 value)
             {
                 _value = value;
             }            
             
-            public MeasuredValue Metre
+            public MeasuredVector3 Metre
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Metre); }
             }
 
-            public MeasuredValue Kilogram
+            public MeasuredVector3 Kilogram
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Kilogram); }
             }
 
-            public MeasuredValue Second
+            public MeasuredVector3 Second
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Second); }
             }
 
-            public MeasuredValue Ampere
+            public MeasuredVector3 Ampere
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Ampere); }
             }
 
-            public MeasuredValue Kelvin
+            public MeasuredVector3 Kelvin
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Kelvin); }
             }
 
-            public MeasuredValue Mole
+            public MeasuredVector3 Mole
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Mole); }
             }
 
-            public MeasuredValue Candela
+            public MeasuredVector3 Candela
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Candela); }
             }
 
-            public MeasuredValue Hertz
+            public MeasuredVector3 Hertz
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Hertz); }
             }
 
-            public MeasuredValue Newton
+            public MeasuredVector3 Newton
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Newton); }
             }
 
-            public MeasuredValue Pascal
+            public MeasuredVector3 Pascal
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Pascal); }
             }
 
-            public MeasuredValue Joule
+            public MeasuredVector3 Joule
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Joule); }
             }
 
-            public MeasuredValue Watt
+            public MeasuredVector3 Watt
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Watt); }
             }
 
-            public MeasuredValue Coulomb
+            public MeasuredVector3 Coulomb
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Coulomb); }
             }
 
-            public MeasuredValue Volt
+            public MeasuredVector3 Volt
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Volt); }
             }
 
-            public MeasuredValue Farad
+            public MeasuredVector3 Farad
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Farad); }
             }
         
-            public MeasuredValue Ohm
+            public MeasuredVector3 Ohm
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Ohm); }
             }
 
-            public MeasuredValue Siemens
+            public MeasuredVector3 Siemens
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Siemens); }
             }
 
-            public MeasuredValue Weber
+            public MeasuredVector3 Weber
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Weber); }
             }
 
-            public MeasuredValue Tesla
+            public MeasuredVector3 Tesla
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Tesla); }
             }
                          
-            public MeasuredValue Henry
+            public MeasuredVector3 Henry
             {
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Henry); }
             }
                          
-            public MeasuredValue Katal
+            public MeasuredVector3 Katal
             {   
-                get { return new MeasuredValue(
+                get { return new MeasuredVector3(
                         _value, UnitsOfMeasurement.SI.Katal); }
             }
         }
