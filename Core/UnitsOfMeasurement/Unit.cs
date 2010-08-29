@@ -110,7 +110,20 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
         
         public override string ToString()
         {
-            return Names.First().Symbol;
+            if (Names.Any())
+                return Names.First().Symbol;
+                
+            return _baseUnitExponents
+                   .Where(e => e.Value != 0)
+                   .Aggregate("", 
+                              (str, e) => 
+                                  e.Value == 1
+                                      ? string.Format("{0} * {1}",
+                                                      str, e.Key)
+                                      : string.Format("{0} * {1}^{2}",
+                                                      str, e.Key, e.Value))
+                                      
+                   .Trim(new [] {' ', '*'});                                                        
         }
     }
 }
