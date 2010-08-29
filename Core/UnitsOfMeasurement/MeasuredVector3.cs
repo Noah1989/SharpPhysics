@@ -26,7 +26,8 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
         public static MeasuredVector3 operator *(MeasuredVector3 vector, 
                                                  MeasuredValue value)
         {
-            throw new NotImplementedException();
+            return new MeasuredVector3(vector._value * value.Value,
+                                       vector._unit  * value.Unit);
         }
         
         public static MeasuredVector3 operator *(MeasuredVector3 vector, 
@@ -38,7 +39,8 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
         public static MeasuredVector3 operator /(MeasuredVector3 vector, 
                                                  MeasuredValue value)
         {
-            throw new NotImplementedException();
+            return new MeasuredVector3(vector._value / value.Value,
+                                       vector._unit  / value.Unit);
         }
                
         public static MeasuredVector3 operator /(MeasuredVector3 vector, 
