@@ -13,7 +13,14 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
             IEnumerable<KeyValuePair<BaseUnit,int>> exponents)
         {
             var found = __cachedUnits.FirstOrDefault(
-                            unit => exponents.All(
+                            unit =>
+                            unit._baseUnitExponents.All(
+                            exponent => exponents.Any(
+                                        exponent1 => 
+                                        exponent.Key == exponent1.Key)
+                                        || exponent.Value == 0)
+                            &&
+                            exponents.All(
                             exponent => unit[exponent.Key] == exponent.Value));
             
             if (found != null)
