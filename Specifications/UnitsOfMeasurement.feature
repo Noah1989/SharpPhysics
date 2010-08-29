@@ -37,4 +37,10 @@ Scenario: Units of measurement mismatch (substracting)
     And a value of 2 amperes
     When I substract the two values
     Then an UnitsOfMeasurementMismatchException should be thrown
+    
+Scenario: Units of measurement mismatch (adding, special case)
+    Given a value of 1 newton
+    And a value of 1 metre per second squared
+    When I add the two values
+    Then an UnitsOfMeasurementMismatchException should be thrown
 

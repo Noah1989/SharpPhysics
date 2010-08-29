@@ -18,6 +18,12 @@ namespace SharpPhysics.Specifications
         {
             _values.Add(SI.Parse(value, unitName));
 	    }
+	    
+        [Given(@"a value of 1 metre per second squared")]
+        public void GivenAValueOf1MetrePerSecondSquared()
+        {
+            _values.Add(1 .SI().Metre / SI.Second.Squared);
+        }
 
         [When(@"I multiply the two values")]
         public void WhenIMultiplyTheTwoValues()
