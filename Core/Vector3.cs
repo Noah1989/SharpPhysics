@@ -4,6 +4,8 @@ namespace SharpPhysics.Core
 {
     public struct Vector3
     {
+        public static readonly Vector3 Zero = new Vector3(0, 0, 0);
+    
         private readonly double _x, _y, _z;
         
         public double X { get { return _x; } }

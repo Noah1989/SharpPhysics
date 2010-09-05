@@ -26,7 +26,7 @@ namespace SharpPhysics.Specifications
                                     .SI().Metre / SI.Second.Squared);
                                     
             ScenarioContext.Current.Pending();
-            //_gravityField.Connect(_pointMass);
+            _pointMass.ForceAnchor.Connect(_gravityField);
         }
 
         [When(@"I simulate ten seconds of time")]
@@ -41,7 +41,7 @@ namespace SharpPhysics.Specifications
         {
             ScenarioContext.Current.Pending();
             //_pointMass.GetFrame(10 .SI().Second)
-            //    .Velocity.Abs()
+           //    .Velocity.Abs()
             //    .Should().Be.EqualTo(98.1 .SI().Metre / SI.Second);
         }
 
@@ -49,8 +49,8 @@ namespace SharpPhysics.Specifications
         public void ThenTheMassPointShouldHaveFallen490Point5Metres()
         {
             ScenarioContext.Current.Pending();
-            //_pointMass.GetFrame(10 .SI().Second)
-            //    .Location.Z
+           // _pointMass.GetFrame(10 .SI().Second)
+             //   .Location.Z
             //    .Should.Be.EqualTo(-490.5 .SI().Metre);
         }
     }
