@@ -25,7 +25,6 @@ namespace SharpPhysics.Specifications
                                 new Vector3(0, 0, -9.81)
                                     .SI().Metre / SI.Second.Squared);
                                     
-            ScenarioContext.Current.Pending();
             _pointMass.ForceAnchor.Connect(_gravityField);
         }
 
