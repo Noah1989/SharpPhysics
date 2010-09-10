@@ -77,6 +77,26 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
             return this;
         }
         
+        public MeasuredValue X
+        {
+            get { return new MeasuredValue(_value.X, _unit); }
+        }
+        
+        public MeasuredValue Y
+        {
+            get { return new MeasuredValue(_value.Y, _unit); }
+        }
+        
+        public MeasuredValue Z
+        {
+            get { return new MeasuredValue(_value.Z, _unit); }
+        }
+        
+        public MeasuredValue Norm
+        {
+            get {  return new MeasuredValue(_value.Norm, _unit); }
+        }
+        
         public override string ToString()
         {
             return String.Format("{0} {1}", _value, _unit);

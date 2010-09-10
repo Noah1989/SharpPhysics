@@ -58,6 +58,11 @@ namespace SharpPhysics.Core.UnitsOfMeasurement
                                      valueA._unit);
         }
         
+        public static MeasuredValue operator -(MeasuredValue value)
+        {
+            return new MeasuredValue(-value._value, value._unit);
+        }
+        
         private static void CheckUnitsMatch(Unit unitA, Unit unitB)
         {
             if(unitA != unitB)

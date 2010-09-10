@@ -6,7 +6,7 @@ using SharpPhysics.Core.UnitsOfMeasurement;
 namespace SharpPhysics.PhysicalEntities.Mechanics
 {
     public class ForceAnchor<TOwner, TFrame> 
-        where TOwner : IPhysical<TFrame> 
+        where TOwner : IPhysical
         where TFrame : IFrame
     {
         private TOwner _owner;
@@ -27,6 +27,7 @@ namespace SharpPhysics.PhysicalEntities.Mechanics
         
         public void Connect(IForceSource<TOwner, TFrame> source)
         {
+            _sources.Add(source);
         }
     }
 }

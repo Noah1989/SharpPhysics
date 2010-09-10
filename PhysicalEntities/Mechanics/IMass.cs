@@ -3,7 +3,7 @@ using SharpPhysics.Core.UnitsOfMeasurement;
 
 namespace SharpPhysics.PhysicalEntities.Mechanics
 {
-    public interface IMass : IPhysical<IFrame>
+    public interface IMass : IPhysical
     {
         MeasuredValue Mass { get; }
     }

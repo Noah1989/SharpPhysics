@@ -52,5 +52,15 @@ namespace SharpPhysics.Core
         {
             throw new NotImplementedException();
         }
+        
+        public double Norm
+        {
+            get { return Math.Sqrt(NormSquared); }
+        }
+        
+        public double NormSquared
+        {
+            get { return _x*_x + _y*_y + _z*_z; }
+        }
     }
 }

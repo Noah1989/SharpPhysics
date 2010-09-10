@@ -3,10 +3,15 @@ using SharpPhysics.Core.UnitsOfMeasurement;
 
 namespace SharpPhysics.PhysicalEntities.Mechanics
 {
-    public class PointMass : PhysicalEntity<SimpleBodyFrame>, IMass
+    public class PointMass : SimulatedPhysical<SimpleBodyFrame>, IMass
     {
         private MeasuredValue _mass;
         private ForceAnchor<PointMass, SimpleBodyFrame> _anchor;
+        
+        protected override ISimulator<SimpleBodyFrame> Simulator
+        {
+            get { throw new System.NotImplementedException(); }
+        }
         
         public MeasuredValue Mass
         {
