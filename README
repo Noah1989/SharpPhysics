@@ -1,5 +1,7 @@
 SharpPhysics - a physics simulation framework written in C#
 
+Requires at least Mono 2.8
+
 This project has a BuildBot running at http://noah-vserver.net:8000
 
 Currently supported features:
